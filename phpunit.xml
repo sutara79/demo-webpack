@@ -1,11 +1,11 @@
 <phpunit bootstrap="vendor/autoload.php">
   <testsuites>
-    <testsuite name="email">
-      <file>test/php/DbControllerTest.php</file>
+    <testsuite name="demo-webpack">
+      <file>./test/php/DbControllerTest.php</file>
     </testsuite>
   </testsuites>
   <filter>
-    <whitelist processUncoveredFilesFromWhitelist="true">
+    <whitelist>
       <directory>./dist/php</directory>
       <file>DbController.php</file>
     </whitelist>
