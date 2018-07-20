@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 7.1
+
+install:
+  - composer install
+  - nvm install 10
+  - nvm use 10
+  - npm install
+
+script:
+  - ./vendor/bin/phpunit --coverage-clover clover.xml
+  - npm test
+
+# Submit generated coverage report to Codecov servers
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -cF php
+ 
