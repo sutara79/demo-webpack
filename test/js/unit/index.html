@@ -28,6 +28,10 @@ mocha.reporter('html');
 <script src="fn-my-plugin.test.js"></script>
 
 <!-- Execute testing -->
-<script>mocha.run()</script>
+<script>
+mocha.run(function (err) {
+  $('<div id="done">').appendTo('body');
+});
+</script>
 </body>
 </html>
